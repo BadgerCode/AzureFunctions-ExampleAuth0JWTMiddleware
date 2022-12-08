@@ -9,6 +9,7 @@ namespace ExampleAuthMiddleware.Auth
 {
     public static class Security
     {
+        // https://liftcodeplay.com/2017/11/25/validating-auth0-jwt-tokens-in-azure-functions-aka-how-to-use-auth0-with-azure-functions/
         private static readonly IConfigurationManager<OpenIdConnectConfiguration> _configurationManager;
 
         private static readonly string ISSUER = Environment.GetEnvironmentVariable("Auth0BaseURL");

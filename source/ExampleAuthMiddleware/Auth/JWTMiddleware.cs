@@ -10,6 +10,7 @@ namespace ExampleAuthMiddleware.Auth
 
         public async Task Invoke(FunctionContext context, FunctionExecutionDelegate next)
         {
+            // https://github.com/Azure/azure-functions-dotnet-worker/blob/main/samples/CustomMiddleware/MyCustomMiddleware.cs
             var requestData = await context.GetHttpRequestDataAsync();
 
             var authHeader = Security.GetAuthHeader(requestData);

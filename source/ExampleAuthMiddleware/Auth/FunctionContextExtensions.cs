@@ -8,6 +8,7 @@ namespace ExampleAuthMiddleware.Auth
     {
         public static void SetHttpResponseStatusCode(this FunctionContext context, HttpStatusCode statusCode)
         {
+            // https://joonasw.net/view/azure-ad-jwt-authentication-in-net-isolated-process-azure-functions
             var coreAssembly = Assembly.Load("Microsoft.Azure.Functions.Worker.Core");
             var featureInterfaceName = "Microsoft.Azure.Functions.Worker.Context.Features.IFunctionBindingsFeature";
             var featureInterfaceType = coreAssembly.GetType(featureInterfaceName);
